@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using SquareLib.Interfaces;
+﻿using SquareLib.Interfaces;
 
 namespace SquareLib.Classes;
 
@@ -38,7 +37,7 @@ public class Triangle : ITriangle
         SideB = sideB;
         SideC = sideC;
 
-        _isTriangleRight = new Lazy<bool>();
+        _isTriangleRight = new Lazy<bool>(CheckIsRight);
 
     }
     
